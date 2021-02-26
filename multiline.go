@@ -32,7 +32,7 @@ var MultilineQuestionTemplate = `
   {{- if .Answer }}{{ "\n" }}{{ end }}
 {{- else }}
   {{- if .Default}}{{color "white"}}({{.Default}}) {{color "reset"}}{{end}}
-  {{- color "cyan"}}[Enter 2 empty lines to finish]{{color "reset"}}
+  {{- color "cyan"}}[Enter 2 empty lines to finish]{{color "reset"}}{{"\n"}}
 {{- end}}`
 
 func (i *Multiline) Prompt(config *PromptConfig) (interface{}, error) {
